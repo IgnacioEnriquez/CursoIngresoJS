@@ -4,7 +4,13 @@
 */
 function mostrar()
 {
-prompt("Inserte dato aqui");
+  var dato
+
+ dato = prompt("Inserte dato aqui");
+
+
+
+
 
 }
 
