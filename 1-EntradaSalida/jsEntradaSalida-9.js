@@ -13,7 +13,7 @@ function mostrarAumento()
 
   parseInt(sueldo);
 
-  porcentaje = (100 * parseInt(sueldo) ) / 10;
+  porcentaje = (10 * parseInt(sueldo) ) / 100;
 
   resultado = parseInt(sueldo) + porcentaje;
 
