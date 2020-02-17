@@ -14,21 +14,71 @@ function CalcularPrecio ()
     var descuento;
     var precioLampara;
     var marca;
+    var resultado;
+    var final;
+    var impuesto;
+    var totalImpuesto;
 
     precioLampara = 35;
 
     cantidad = document.getElementById("Cantidad").value;
     marca = document.getElementById("Marca").value;
+    resultado = cantidad * precioLampara;
+    impuesto = final * 0.1;
+
+
 
     if(cantidad >= 6){
         descuento = 0.5;
+        final = resultado * descuento;
+        document.getElementById("precioDescuento").value = final;
+
     } else if (cantidad == 5 && marca == "ArgentinaLuz") {
-        descuento = 0,4;
+        descuento = 0.4;
+        final = resultado * descuento;
+        document.getElementById("precioDescuento").value = final;
+
     } else if (cantidad == 5) {
-        descuento = 0,3;
+        descuento = 0.3;
+        final = resultado * descuento;
+       document.getElementById("precioDescuento").value = final;
 
     } else if (cantidad == 4 && marca == "ArgentinaLuz"){
-        descuento = 0,15
+        descuento = 0.25;
+        final = resultado * descuento;
+       document.getElementById("precioDescuento").value = final;
 
-    } 
+    }else if (cantidad == 4 && marca == "FelipeLamparas") {
+        descuento = 0.25;
+        final = resultado * descuento;
+        document.getElementById("precioDescuento").value = final;
+
+    }else if (cantidad == 4){
+        descuento = 0.2;
+        final = resultado * descuento;
+        document.getElementById("precioDescuento").value = final;
+
+    }else if (cantidad == 3 && marca == "ArgentinaLuz"){
+        descuento = 0.15;
+        final = resultado * descuento;
+        document.getElementById("precioDescuento").value = final;
+
+    }else if (cantidad == 3 && marca == "FelipeLamparas"){
+        descuento = 0.10;
+        final = resultado * descuento;
+       document.getElementById("precioDescuento").value = final;
+
+    }else if (cantidad == 3){
+        descuento = 0.05;
+        final = resultado * descuento;
+       document.getElementById("precioDescuento").value = final;
+           
+
+    } if(final > 120){
+        impuesto = final * 0.1;
+        totalImpuesto = final + impuesto ;
+        document.getElementById("precioDescuento").value = totalImpuesto;
+        alert("IIBB Usted pago " + impuesto);
+         
     }
+ } 
