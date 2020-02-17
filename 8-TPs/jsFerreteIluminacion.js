@@ -27,5 +27,8 @@ function CalcularPrecio ()
     } else if (cantidad == 5) {
         descuento = 0,3;
 
-    } else if 
+    } else if (cantidad == 4 && marca == "ArgentinaLuz"){
+        descuento = 0,15
+
+    } 
     }
