@@ -16,7 +16,6 @@ function comenzar()
   min = 1
 
   numeroRandom = Math.floor(Math.random() * (max - min)) + min ;
- alert(numeroRandom);
   //1piedra 2papel 3tijera
 
 
